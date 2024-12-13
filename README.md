@@ -111,6 +111,10 @@ imagenet
 python -m torch.distributed.launch --nproc_per_node=8 main.py --cfg <path-to-config-file> --data-path <imagenet-path> --output <output-path> --eval --resume <path-to-pretrained-weights>
 ```
 
+```
+CUDA_VISIBLE_DEVICES=2 python main.py --cfg ./cfgs/mlla_t.yaml --data-path /raid/dzz/art/art_dataset --output /raid/dzz/art/output --amp
+```
+
 - To train `MLLA-T/S/B` on ImageNet from scratch, run:
 
 ```
